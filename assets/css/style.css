@@ -4,3 +4,74 @@
     box-sizing: border-box;
 }
 
+:root {
+--head: #009688;
+--dark: #6B7376;
+--lightblue: #8EDAFC;
+--soft-dark: #B1B1B1;
+--lightgreen: #D5F9BA;
+--primary: #D9DBD5;
+--lightuser: #E9EBEB;
+--lighthead: #EAEAEA;
+--bg-icon: #F3EEEA;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+/* #region DEBUG */
+.debug #site_header {
+    height: 100px;
+}
+
+.debug #site_main {
+    height: 300px;
+}
+/* #endregion DEBUG */
+
+#app {
+    height: 100vh;
+}
+
+#site_header {
+    background-color: var(--head);
+}
+
+#site_main {
+    background-color: var(--primary);
+}
+
+.wrapper {
+    position: relative;
+    top: -80px;
+    left: 80px;
+}
+
+.user  {
+    background-color: var(--lightuser);
+}
+
+.icon_me{
+    border-radius: 50%;
+    width: 25%;
+}
+
+.icon_friend {
+    border-radius: 50%;
+    width: 20%;
+}
+
+.user > span {
+    font-size: 12px;
+}
+
+.icon_more i {
+    color: var(--soft-dark);
+}
+
+.user_friend {
+    border-left: 1px solid var(--primary);
+}
+
