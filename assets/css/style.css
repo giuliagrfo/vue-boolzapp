@@ -31,7 +31,7 @@ img {
 }
 /* #endregion DEBUG */
 
-#app {
+body {
     height: 100vh;
 }
 
@@ -46,24 +46,27 @@ img {
 .wrapper {
     position: relative;
     top: -80px;
-    left: 80px;
 }
 
-.user  {
+.user_me, .user_friend, .icon_more  {
     background-color: var(--lightuser);
+}
+
+.user_me, .user_friend {
+    width: 100%;
 }
 
 .icon_me{
     border-radius: 50%;
-    width: 25%;
+    width: 50px;
 }
 
 .icon_friend {
     border-radius: 50%;
-    width: 20%;
+    width: 50px;
 }
 
-.user > span {
+.user_me > span, .user_friend > span {
     font-size: 12px;
 }
 
