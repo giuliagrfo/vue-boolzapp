@@ -130,6 +130,7 @@ body {
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
     height: calc(100% - 110px);
+    font-size: 13px;
 }
 
 .text_area {
@@ -140,4 +141,28 @@ body {
 .text_area i {
     color: var(--dark);
     padding: 1rem 1.5rem;
+}
+
+.reply{
+    background-color: white;
+    width: 250px;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.5rem;
+    position: relative;
+    top: 150px;
+    left: 80px;
+}
+
+.sent_message {
+    background-color: var(--lightgreen);
+    width: 250px;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.5rem;
+    position: relative;
+    right: -500px;
+}
+
+.chat_area p {
+    color: var(--soft-dark);
+    font-size: 10px;
 }
