@@ -31,21 +31,21 @@ img {
 }
 /* #endregion DEBUG */
 
-body {
-    height: 100vh;
-}
 
 #site_header {
     background-color: var(--head);
+    height: 100px;
+
 }
 
 #site_main {
     background-color: var(--primary);
+    height: calc(100vh - 100px);
 }
 
 .wrapper {
     position: relative;
-    top: -80px;
+    top: -20%;
 }
 
 .user_me, .user_friend, .icon_more  {
@@ -78,3 +78,17 @@ body {
     border-left: 1px solid var(--primary);
 }
 
+.notice {
+    background-color: var(--lightblue);
+}
+
+.notice > i {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    color: var(--lightblue);
+}
+
+.active_notice h6, .active_notice a {
+    font-size: 14px;
+}
