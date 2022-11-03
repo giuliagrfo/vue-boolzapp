@@ -185,7 +185,8 @@ createApp({
         writeMessage(){
             this.contacts[this.activeUser].messages.push(this.newMessage)
             this.newMessage = {date: '10/01/2020 15:30:55', message:'', status: 'sent'}
-       
+            // console.log(this.newMessage.message);
+            setTimeout
         }
     }
 }).mount('#app')
