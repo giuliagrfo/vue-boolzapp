@@ -11,7 +11,6 @@ createApp({
     data(){
         return {
             newMessage: {date: '10/01/2020 15:30:55', message:'', status: 'sent'},
-            
             activeUser: 0,
             contacts: [
                 {
