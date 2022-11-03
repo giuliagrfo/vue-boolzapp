@@ -146,8 +146,9 @@ body {
 .received{
     background-color: white;
     width: 250px;
-    border-radius: 0.4rem;
     padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.4rem;
     position: relative;
     top: 150px;
     left: 80px;
@@ -156,8 +157,9 @@ body {
 .sent_message {
     background-color: var(--lightgreen);
     width: 250px;
-    border-radius: 0.4rem;
     padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.4rem;
     position: relative;
     right: -500px;
 }
