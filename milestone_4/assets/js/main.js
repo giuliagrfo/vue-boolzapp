@@ -11,6 +11,7 @@ createApp({
     data(){
         return {
             newMessage: {date: '10/01/2020 15:30:55', message:'', status: 'sent'},
+            searchUserName: '',
             activeUser: 0,
             contacts: [
                 {
@@ -191,7 +192,25 @@ createApp({
         receivedMessage(){
             this.userMessage = {date: '10/01/2020 15:30:55', message:'Ok!', status: 'received'}
             this.contacts[this.activeUser].messages.push(this.userMessage)
-        }
+        },
+        search(){
+        this.contacts.forEach(contact => {
+            contact.visible = false
+            const userName = contact.name.toLowerCase();
+            const inputText = this.searchUserName.toLowerCase()
+            let characters ='';
+            for (let i = 0; i < userName.length ; i++) {
+                characters += userName.charAt(i);
+                if (characters === inputText){
+                    contact.visible = true
+                } 
+            }
+            if(inputText === ''){
+                contact.visible = true
+            }
+            console.log(inputText, characters);
+        });
+       }
     }
 }).mount('#app')
 

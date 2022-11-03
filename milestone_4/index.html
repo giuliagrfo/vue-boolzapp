@@ -48,16 +48,17 @@
                         <!-- notice -->
 
                         <div class="search">
-                            <div class="search_area">
-                                <i class="fa-solid fa-magnifying-glass px-3 py-2"></i>
-                                <span>Cerca o inizia nuova chat</span>
+                            <div class="search_area d-flex align-items-center">
+                                <i class="fa-solid fa-magnifying-glass px-2 py-2"></i>
+                                <input type="text" class="form-control" placeholder="Cerca o inizia nuova chat" v-model="searchUserName" @input="search">
+                                
                             </div>
                             
                         </div>
                         <!-- search area -->
 
                         <div class="users">
-                            <div  v-for="(contact, i) in contacts" class="chat d-flex justify-content-between py-2" :class="activeUser === i ? 'active' : ''" @click="selectActiveUser(i)">
+                            <div  v-for="(contact, i) in contacts" class="chat d-flex justify-content-between py-2" :style="contact.visible === true ? '' : 'display: none;' " :class="activeUser === i ? 'active' : ''" @click="selectActiveUser(i)">
                                 <div class="user_info d-flex">
                                     <div class="user_img">
                                         <img :src="`./assets/img/avatar${contact.avatar}.jpg`" alt="">
