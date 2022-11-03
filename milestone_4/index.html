@@ -58,17 +58,17 @@
                         <!-- search area -->
 
                         <div class="users">
-                            <div  v-for="(contact, i) in contacts" class="chat d-flex justify-content-between py-2" :style="contact.visible === true ? '' : 'display: none;' " :class="activeUser === i ? 'active' : ''" @click="selectActiveUser(i)">
-                                <div class="user_info d-flex">
-                                    <div class="user_img">
+                            <div  v-for="(contact, i) in contacts" class="chat d-flex justify-content-between py-2 " :class="activeUser === i ? 'active' : ''" @click="selectActiveUser(i)">
+                                <div class="user_info d-flex"  >
+                                    <div class="user_img" :class="contact.visible === true ? '' : 'none'">
                                         <img :src="`./assets/img/avatar${contact.avatar}.jpg`" alt="">
                                     </div>
-                                    <div class="user_name">
+                                    <div class="user_name" :class="contact.visible === true ? '' : 'none'">
                                         <span>{{contact.name}}</span>
-                                        <p class="m-0">Ultimo messaggio inviato</p>
+                                        <p class="m-0" >Ultimo messaggio inviato</p>
                                     </div>
                                 </div>
-                                <div class="time px-2">
+                                <div class="time px-2" :class="contact.visible === true ? '' : 'none'">
                                     <span>12:00</span>
                                 </div>
                             </div>
