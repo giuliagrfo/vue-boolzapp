@@ -78,9 +78,9 @@
                         
                         <div class="user_active d-flex justify-content-between p-1">
                             <div class="name d-flex align-items-center">
-                                <img class="icon_active" src="./assets/img/avatar_1.jpg" alt="">
+                                <img class="icon_active" :src="`./assets/img/avatar${contacts[activeUser].avatar}.jpg`" alt="">
                                 <div class="user_name px-3">
-                                    <span>Michele</span>
+                                    <span>{{contacts[activeUser].name}}</span>
                                     <p class="m-0">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                             </div>
