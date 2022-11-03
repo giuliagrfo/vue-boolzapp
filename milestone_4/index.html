@@ -24,7 +24,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4 user_list p-0">
-                        
                         <div class="user_me d-flex justify-content-between p-1">
                             <div class="name">
                                 <img class="icon_me" src="./assets/img/avatar_io.jpg" alt="">
@@ -36,7 +35,7 @@
                                 <i class="fa-solid fa-ellipsis-vertical p-2"></i>
                             </div>
                         </div>
-                        
+                        <!-- user Me -->
                         
                         <div class="notice d-flex align-items-center">
                             <i class="fa-solid fa-bell-slash m-2"></i>
@@ -46,6 +45,7 @@
                             </div>
                             
                         </div>
+                        <!-- notice -->
 
                         <div class="search">
                             <div class="search_area">
@@ -54,6 +54,7 @@
                             </div>
                             
                         </div>
+                        <!-- search area -->
 
                         <div class="users">
                             <div  v-for="(contact, i) in contacts" class="chat d-flex justify-content-between py-2" :class="activeUser === i ? 'active' : ''" @click="selectActiveUser(i)">
@@ -72,15 +73,15 @@
                             </div>
                                                        
                         </div>
-                        
+                        <!-- user list -->
                     </div>
                     <div class="col-8 user_chat p-0">
                         
-                        <div class="user_friend d-flex justify-content-between p-1">
+                        <div class="user_active d-flex justify-content-between p-1">
                             <div class="name d-flex align-items-center">
-                                <img class="icon_friend" src="./assets/img/avatar_1.jpg" alt="">
+                                <img class="icon_active" :src="`./assets/img/avatar${contacts[activeUser].avatar}.jpg`" alt="">
                                 <div class="user_name px-3">
-                                    <span>Michele</span>
+                                    <span>{{contacts[activeUser].name}}</span>
                                     <p class="m-0">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                             </div>
@@ -90,7 +91,8 @@
                                 <i class="fa-solid fa-ellipsis-vertical p-2"></i>
                             </div>
                         </div>  
-                        
+                        <!-- user active -->
+
                         <div class="chat_area">
                             <div v-for="message in contacts[activeUser].messages" class="message" :class="message.status === 'sent' ? 'sent_message' : 'received'">
                                 <span>{{message.message}}</span>
@@ -98,7 +100,8 @@
 
                             </div>
                         </div>
-                        
+                        <!-- chat area --> 
+
                         <div class="text_area d-flex p-2">
                             <div class="emoji">
                                 <i class="fa-regular fa-face-smile"></i>
@@ -108,7 +111,7 @@
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
                         </div>
-                        
+                        <!-- input message -->
                     </div>
                 </div>
             </div>

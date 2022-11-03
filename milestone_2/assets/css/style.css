@@ -43,20 +43,20 @@ body {
     height: 100%;
 }
 
-.user_me, .user_friend, .icon_more, .search  {
+.user_me, .user_active, .icon_more, .search  {
     background-color: var(--lightuser);
 }
 
-.user_me, .user_friend, .text {
+.user_me, .user_active, .text {
     width: 100%;
 }
 
-.icon_me, .icon_friend, .users img{
+.icon_me, .icon_active, .users img{
     border-radius: 50%;
     width: 50px;
 }
 
-.user_me > span, .user_friend > span {
+.user_me > span, .user_active > span {
     font-size: 12px;
 }
 
@@ -68,7 +68,7 @@ body {
     height: 60px;
 }
 
-.user_friend {
+.user_active {
     height: 60px;
     border-left: 1px solid var(--primary);
 }
