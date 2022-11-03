@@ -11,6 +11,7 @@ createApp({
     data(){
         return {
             newMessage: {date: '10/01/2020 15:30:55', message:'', status: 'sent'},
+            
             activeUser: 0,
             contacts: [
                 {
@@ -186,7 +187,11 @@ createApp({
             this.contacts[this.activeUser].messages.push(this.newMessage)
             this.newMessage = {date: '10/01/2020 15:30:55', message:'', status: 'sent'}
             // console.log(this.newMessage.message);
-            setTimeout
+            setTimeout(this.receivedMessage, 1000)
+        },
+        receivedMessage(){
+            this.userMessage = {date: '10/01/2020 15:30:55', message:'Ok!', status: 'received'}
+            this.contacts[this.activeUser].messages.push(this.userMessage)
         }
     }
 }).mount('#app')
