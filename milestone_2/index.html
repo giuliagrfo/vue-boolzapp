@@ -92,19 +92,11 @@
                         </div>  
                         
                         <div class="chat_area">
-                            <div class="received">
-                                <!-- <span>{{contacts[activeUser].messages[activeUser].message}}</span> -->
-                                <p class="text-end m-0">16:15</p>
-                            </div>
-                            <div v-for="(message, i) in contacts[activeUser].messages" class="sent_message">
+                            <div v-for="(message, i) in contacts[activeUser].messages" class="message" :class="contacts[activeUser].messages[i].status === 'sent' ? 'sent_message' : 'received'">
                                 <span>{{contacts[activeUser].messages[i].message}}</span>
-                                <p class="text-end m-0">{{contacts[activeUser].messages[i].date}}</p>
+                                <p class="text-end m-0 pt-1">{{contacts[activeUser].messages[i].date}}</p>
 
                             </div>
-                            <!-- <div class="sent_message mt-2">
-                                <span>Ricordati di stendere i panni</span>
-                                <p class="text-end m-0">15:50</p>
-                            </div> -->
                         </div>
                         
                         <div class="text_area d-flex p-1">
