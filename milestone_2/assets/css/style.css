@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--head: #009688;
+--dark: #6B7376;
+--lightblue: #8EDAFC;
+--soft-dark: #B1B1B1;
+--lightgreen: #D5F9BA;
+--primary: #D9DBD5;
+--lightuser: #E9EBEB;
+--lighthead: #EAEAEA;
+--bg-icon: #F3EEEA;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+/* #region DEBUG */
+
+.debug .message_area {
+    height: 500px;
+}
+/* #endregion DEBUG */
+body {
+    height: 100vh;
+    background-color: var(--primary);
+}
+
+#site_header {
+    background-color: var(--head);
+    height: 100px;
+}
+
+.container {
+    position: relative;
+    top: -80px;
+    height: 100%;
+}
+
+.user_me, .user_friend, .icon_more, .search  {
+    background-color: var(--lightuser);
+}
+
+.user_me, .user_friend, .text {
+    width: 100%;
+}
+
+.icon_me, .icon_friend, .users img{
+    border-radius: 50%;
+    width: 50px;
+}
+
+.user_me > span, .user_friend > span {
+    font-size: 12px;
+}
+
+.icon_more i, .search > i, .search > span {
+    color: var(--soft-dark);
+}
+
+.user_me {
+    height: 60px;
+}
+
+.user_friend {
+    height: 60px;
+    border-left: 1px solid var(--primary);
+}
+
+.notice {
+    background-color: var(--lightblue);
+}
+
+.notice > i {
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: var(--lightblue);
+}
+
+.active_notice h6, .active_notice a {
+    font-size: 14px;
+}
+
+.active_notice a {
+    color: var(--dark);
+}
+
+.notice > i, .users {
+    background-color: white;
+}
+
+.search, .text_area {
+    padding: 0.25rem 0.5rem;
+}
+
+.search_area, .text {
+    border: 1px solid var(--lighthead);
+    background-color: white;
+}
+
+.search_area span {
+    color: var(--soft-dark);
+}
+
+.users {
+    height: 550px;
+    overflow-y: auto;
+}
+
+.users img {
+    margin: 0.2rem 0.5rem;
+}
+
+.user_name p, .time, .text {
+    font-size: 13px;
+    color: var(--soft-dark);
+}
+
+.chat {
+    border-top: 1px solid var(--lighthead);
+}
+
+.chat_area {
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+    height: calc(100% - 110px);
+    font-size: 13px;
+}
+
+.text_area {
+    background-color: var(--bg-icon);
+    height: 50px;
+}
+
+.text_area i {
+    color: var(--dark);
+    padding: 1rem 1.5rem;
+}
+
+.received{
+    background-color: white;
+    width: 250px;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.5rem;
+    position: relative;
+    top: 150px;
+    left: 80px;
+}
+
+.sent_message {
+    background-color: var(--lightgreen);
+    width: 250px;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.5rem;
+    position: relative;
+    right: -500px;
+}
+
+.chat_area p {
+    color: var(--soft-dark);
+    font-size: 10px;
+}
+
+
+.active {
+    background-color: #d9d9d9;
+}
