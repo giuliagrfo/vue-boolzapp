@@ -92,20 +92,18 @@
                         </div>  
                         
                         <div class="chat_area">
-                            <div v-for="(message, i) in contacts[activeUser].messages" class="message" :class="contacts[activeUser].messages[i].status === 'sent' ? 'sent_message' : 'received'">
-                                <span>{{contacts[activeUser].messages[i].message}}</span>
-                                <p class="text-end m-0 pt-1">{{contacts[activeUser].messages[i].date}}</p>
+                            <div v-for="message in contacts[activeUser].messages" class="message" :class="message.status === 'sent' ? 'sent_message' : 'received'">
+                                <span>{{message.message}}</span>
+                                <p class="text-end m-0 pt-1">{{message.date}}</p>
 
                             </div>
                         </div>
                         
-                        <div class="text_area d-flex p-1">
+                        <div class="text_area d-flex p-2">
                             <div class="emoji">
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
-                            <div class="text d-flex align-items-center">
-                                <span class="px-3">Scrivi un messaggio</span>
-                            </div>
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="writeMessage.message" @keyup.enter="writeMessage">
                             <div class="emoji">
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
