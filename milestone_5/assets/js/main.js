@@ -208,7 +208,7 @@ createApp({
             console.log(inputText, characters);
         });
        },
-       delete(i){
+       deleteMessage(i){
             this.contacts[this.activeUser].messages.splice(i, 1)
        }
     }

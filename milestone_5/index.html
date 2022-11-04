@@ -95,18 +95,18 @@
                         <!-- user active -->
 
                         <div class="chat_area">
-                            <div v-for="message in contacts[activeUser].messages" :class="message.status === 'sent' ? 'sent_message' : 'received'">
+                            <div v-for="(message, i) in contacts[activeUser].messages" :class="message.status === 'sent' ? 'sent_message' : 'received'">
                                 <span>{{message.message}}</span>
-                                <p class="text-end m-0 pt-1">{{message.date}}</p>
-                               
                                 <div class="dropdown">
                                     <button class="btn border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          <i class="fa-solid fa-angle-down"></i>
+                                        <i class="fa-solid fa-angle-down"></i>
                                     </button>
                                     <ul class="dropdown-menu">
-                                          <li><a class="dropdown-item" href="#" @click="delete(i)">Elimina messaggio</a></li>
+                                        <li><a class="dropdown-item" href="#" @click="deleteMessage(i)">Elimina messaggio</a></li>
                                     </ul>
                                 </div>
+                                <p class="text-end m-0 pt-1">{{message.date}}</p>
+                               
                             </div>
                         </div>
                         <!-- chat area --> 
