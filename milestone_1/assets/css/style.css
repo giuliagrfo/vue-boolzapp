@@ -14,22 +14,23 @@
 --lightuser: #E9EBEB;
 --lighthead: #EAEAEA;
 --bg-icon: #F3EEEA;
+}
 
+body {
+    height: 100vh;
+    background-color: var(--primary);
 }
 
 img {
     max-width: 100%;
 }
 
-/* #region DEBUG */
-
-.debug .message_area {
-    height: 500px;
+.active {
+    background-color: #d9d9d9;
 }
-/* #endregion DEBUG */
-body {
-    height: 100vh;
-    background-color: var(--primary);
+
+.none {
+    display: none;
 }
 
 #site_header {
@@ -40,38 +41,39 @@ body {
 .container {
     position: relative;
     top: -80px;
-    height: 100%;
 }
 
-.user_me, .user_active, .icon_more, .search  {
+/* User head */
+
+.user_me, .user_active,
+.icon_more, 
+.search {
     background-color: var(--lightuser);
 }
 
-.user_me, .user_active, .text {
-    width: 100%;
-}
-
-.icon_me, .icon_active, .users img{
+.icon_me, 
+.icon_active, 
+.users img {
     border-radius: 50%;
     width: 50px;
 }
 
-.user_me > span, .user_active > span {
+.user_me > span, 
+.user_active > span {
     font-size: 12px;
 }
 
-.icon_more i, .search > i, .search > span {
+.icon_more i, 
+.search > i, 
+.search > span {
     color: var(--soft-dark);
 }
 
-.user_me {
-    height: 60px;
-}
-
-.user_active {
-    height: 60px;
+.user_friend {
     border-left: 1px solid var(--primary);
 }
+
+/* Notice */
 
 .notice {
     background-color: var(--lightblue);
@@ -83,7 +85,8 @@ body {
     color: var(--lightblue);
 }
 
-.active_notice h6, .active_notice a {
+.active_notice h6, 
+.active_notice a {
     font-size: 14px;
 }
 
@@ -91,22 +94,25 @@ body {
     color: var(--dark);
 }
 
-.notice > i, .users {
+.notice > i, 
+.users {
     background-color: white;
 }
 
-.search, .text_area {
+/* Search area */
+
+.search, 
+.text_area {
     padding: 0.25rem 0.5rem;
 }
 
-.search_area, .text {
+.search_area, 
+.text {
     border: 1px solid var(--lighthead);
     background-color: white;
 }
 
-.search_area span {
-    color: var(--soft-dark);
-}
+/* User list */
 
 .users {
     height: 550px;
@@ -117,7 +123,10 @@ body {
     margin: 0.2rem 0.5rem;
 }
 
-.user_name p, .time, .text {
+.user_name p, 
+.time, 
+.text, 
+.search_area span {
     font-size: 13px;
     color: var(--soft-dark);
 }
@@ -126,43 +135,27 @@ body {
     border-top: 1px solid var(--lighthead);
 }
 
+/* Chat area */
+
 .chat_area {
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
-    height: calc(100% - 110px);
+    height: 601px;
     font-size: 13px;
-}
-
-.text_area {
-    background-color: var(--bg-icon);
-    height: 50px;
-}
-
-.text_area i {
-    color: var(--dark);
-    padding: 1rem 1.5rem;
-}
-
-.reply{
-    background-color: white;
-    width: 250px;
-    border-radius: 0.4rem;
-    padding: 0.2rem 0.5rem;
-    position: relative;
-    top: 150px;
-    left: 80px;
-}
-
-.sent_message {
-    background-color: var(--lightgreen);
-    width: 250px;
-    border-radius: 0.4rem;
-    padding: 0.2rem 0.5rem;
-    position: relative;
-    right: -500px;
 }
 
 .chat_area p {
     color: var(--soft-dark);
     font-size: 10px;
 }
+
+.text_area {
+    background-color: var(--bg-icon);
+    height: 55px;
+}
+
+.text_area i {
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+}
+
