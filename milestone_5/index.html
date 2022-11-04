@@ -58,17 +58,17 @@
                         <!-- search area -->
 
                         <div class="users">
-                            <div v-for="(contact, i) in contacts" class="chat d-flex justify-content-between py-2 " :class="activeUser === i ? 'active' : ''" @click="selectActiveUser(i)">
+                            <div v-for="(contact, i) in contacts" class="chat py-2" :class="activeUser === i ? 'active' : ''" :style="contact.visible === true ? '' : 'display: none;' " @click="selectActiveUser(i)" >
                                 <div class="user_info d-flex">
-                                    <div class="user_img" :class="contact.visible === true ? '' : 'none'">
+                                    <div class="user_img">
                                         <img :src="`./assets/img/avatar${contact.avatar}.jpg`" alt="">
                                     </div>
-                                    <div class="user_name" :class="contact.visible === true ? '' : 'none'">
+                                    <div class="user_name">
                                         <span>{{contact.name}}</span>
                                         <p class="m-0" >Ultimo messaggio inviato</p>
                                     </div>
                                 </div>
-                                <div class="time px-2" :class="contact.visible === true ? '' : 'none'">
+                                <div class="time px-2">
                                     <span>12:00</span>
                                 </div>
                             </div>
@@ -102,6 +102,7 @@
                                         <i class="fa-solid fa-angle-down"></i>
                                     </button>
                                     <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Message Info</a></li>
                                         <li><a class="dropdown-item" href="#" @click="deleteMessage(i)">Elimina messaggio</a></li>
                                     </ul>
                                 </div>

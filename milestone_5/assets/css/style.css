@@ -126,13 +126,16 @@ img {
 .user_name p, 
 .time, 
 .text, 
-.search_area span {
+.search_area span, 
+button > i {
     font-size: 13px;
     color: var(--soft-dark);
 }
 
 .chat {
     border-top: 1px solid var(--lighthead);
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Chat area */

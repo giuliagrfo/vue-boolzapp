@@ -92,9 +92,9 @@
                         </div>  
                         
                         <div class="chat_area">
-                            <div v-for="(message, i) in contacts[activeUser].messages" class="message" :class="contacts[activeUser].messages[i].status === 'sent' ? 'sent_message' : 'received'">
-                                <span>{{contacts[activeUser].messages[i].message}}</span>
-                                <p class="text-end m-0 pt-1">{{contacts[activeUser].messages[i].date}}</p>
+                            <div v-for="message in contacts[activeUser].messages" class="message" :class="message.status === 'sent' ? 'sent_message' : 'received'">
+                                <span>{{message.message}}</span>
+                                <p class="text-end m-0 pt-1">{{message.date}}</p>
 
                             </div>
                         </div>
