@@ -140,7 +140,7 @@ img {
 .chat_area {
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
-    height: 601px;
+    height: 595px;
     font-size: 13px;
 }
 
@@ -157,5 +157,27 @@ img {
 .text_area i {
     color: var(--dark);
     padding: 0.5rem 1rem;
+}
+
+.received{
+    background-color: white;
+    width: 250px;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.4rem;
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+
+.sent_message {
+    background-color: var(--lightgreen);
+    width: 250px;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.4rem;
+    position: relative;
+    top: 10px;
+    right: -470px;
 }
 

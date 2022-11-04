@@ -1,4 +1,8 @@
-
+/*
+MILESTONE 5
+-  Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
+permette di cancellare il messaggio selezionato
+*/
 
 const {
     createApp

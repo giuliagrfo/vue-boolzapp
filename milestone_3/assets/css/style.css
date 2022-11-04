@@ -140,7 +140,7 @@ img {
 .chat_area {
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
-    height: 601px;
+    height: 595px;
     font-size: 13px;
 }
 

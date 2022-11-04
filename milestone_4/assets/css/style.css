@@ -133,6 +133,8 @@ img {
 
 .chat {
     border-top: 1px solid var(--lighthead);
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Chat area */

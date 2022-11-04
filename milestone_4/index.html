@@ -58,7 +58,7 @@
                         <!-- search area -->
 
                         <div class="users">
-                            <div v-for="(contact, i) in contacts" class="chat d-flex justify-content-between py-2 " :class="activeUser === i ? 'active' : ''"  :style="contact.visible === true ? '' : 'display: none;' " @click="selectActiveUser(i)">
+                            <div v-for="(contact, i) in contacts" class="chat py-2" :class="activeUser === i ? 'active' : ''" :style="contact.visible === true ? '' : 'display: none;' " @click="selectActiveUser(i)" >
                                 <div class="user_info d-flex">
                                     <div class="user_img">
                                         <img :src="`./assets/img/avatar${contact.avatar}.jpg`" alt="">
