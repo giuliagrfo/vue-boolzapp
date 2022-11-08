@@ -124,11 +124,19 @@ img {
 }
 
 .user_name p, 
-.time, 
 .text, 
 .search_area span, 
 button > i {
     font-size: 13px;
+    color: var(--soft-dark);
+}
+
+.user_name p {
+    max-width: 200px;
+}
+
+.time {
+    font-size: 10px;
     color: var(--soft-dark);
 }
 
@@ -187,5 +195,5 @@ button > i {
 .dropdown {
     position: absolute;
     top: -8px;
-    left: 210px;
+    left: 220px;
 }
